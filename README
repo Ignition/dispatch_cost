@@ -1,0 +1,18 @@
+CC=clang CXX=clang++ cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+cmake --build build -- -j 
+
+2023-08-13T16:25:55+01:00
+Running ./build/bench
+Run on (4 X 2664.36 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x2)
+  L1 Instruction 32 KiB (x2)
+  L2 Unified 256 KiB (x2)
+  L3 Unified 4096 KiB (x1)
+Load Average: 2.00, 3.36, 2.61
+--------------------------------------------------------
+Benchmark              Time             CPU   Iterations
+--------------------------------------------------------
+BM_ViaVirtual       1.96 ns         1.96 ns    355882306
+BM_ViaProxy         1.63 ns         1.63 ns    422535874
+
